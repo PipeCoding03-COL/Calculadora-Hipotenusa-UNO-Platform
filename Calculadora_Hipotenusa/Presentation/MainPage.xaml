@@ -1,0 +1,55 @@
+﻿<Page x:Class="Calculadora_Hipotenusa.Presentation.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Calculadora_Hipotenusa.Presentation"
+      xmlns:uen="using:Uno.Extensions.Navigation.UI"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      xmlns:um="using:Uno.Material"
+      NavigationCacheMode="Required"
+      Background="{ThemeResource BackgroundBrush}">
+  <ScrollViewer IsTabStop="True">
+    <Grid utu:SafeArea.Insets="VisibleBounds">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition />
+      </Grid.RowDefinitions>
+      <utu:NavigationBar Content="{Binding Title}" />
+
+        <StackPanel Grid.Row="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Spacing="16"
+            Width="320">
+            <TextBlock Text="Calculadora de hipotenusa"
+                FontSize="20"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                TextAlignment="Center"
+                Margin="0,0,0,8"/>
+            <TextBox x:Name="txtCatetoA"
+                PlaceholderText="Cateto A"
+                Width="240"
+                HorizontalAlignment="Center"
+                InputScope="Number"
+                Margin="0,0,0,4"/>
+            <TextBox x:Name="txtCatetoB"
+                PlaceholderText="Cateto B"
+                Width="240"
+                HorizontalAlignment="Center"
+                InputScope="Number"
+                Margin="0,0,0,8"/>
+            <Button x:Name="btnCalcular"
+                Width="140"
+                Content="CALCULAR"
+                HorizontalAlignment="Center"
+                Click="calcularHipotenusa"/>
+            <TextBlock x:Name="lblAns"
+                Text=""
+                FontSize="16"
+                HorizontalAlignment="Center"
+                Margin="0,8,0,0"/>
+        </StackPanel>
+    </Grid>
+  </ScrollViewer>
+</Page>
